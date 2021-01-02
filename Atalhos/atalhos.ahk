@@ -1,0 +1,4 @@
+WindowsPrint()
+{
+    Send "#{PrintScreen}"
+}
