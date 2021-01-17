@@ -1,0 +1,17 @@
+Nome Jogo: Subnautica
+Nome Exec Jogo: SubnauticaZero.exe
+Caminho Jogo: E:\Games\Steam\steamapps\common\SubnauticaZero
+Tempo Iniciar Jogo: 15
+Tempo para Tela Inicial: 30
+Comandos Fechar Jogo: 900,1275;
+Comandos Resolucao FullHd: ;
+Comandos Resolucao QuadHd: 1920,780;1920,780;1920,780;1920,780;
+Comandos Resolucao UltraHd: 1920,780;1920,780;1920,780;1920,780;1920,780;
+Comandos Tela Inicial para Resolucao: 900,1170;
+Comandos Aplicar Resolucao: ;
+Comandos Sair Tela da Resolucao: 730,1130;
+Comandos Retornar para Resolucao Inicial: ;
+Comandos Iniciar Benchmark: ;
+Comandos Fechar Benchmark: ;
+Duracao do Benchmark em Segundos: 60
+Intervalo de Print no Benchmark em Segundos: 60
