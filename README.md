@@ -11,30 +11,11 @@ A ideia deste projeto é disponibilizar uma forma de automatização de testes e
 - Armazenamento de printscreen após e durante a execução dos benchmarks;
 - Armazenamento dos principais componentes do computador (GPU, CPU e RAM).
 
-## A fazer a curto prazo
+## Lista de Atividades
 
-Os itens abaixo estão mapeados para serem feitos:
+Link para o trello com os itens a serem implementados:
 
-- Voltar para resolução inicial após os testes;
-- Guardar as informações da especificação do pc após executar todos os benchmarks;
-- Melhorar as explicações desta página e fornecer um tutorial de cada um dos parâmetros de configuração do jogo com um exemplo para cada um deles.
-- Configuração para iniciar ou carregar o save do jogo.
-- Criar tutorial e separar melhor os itens do readme
-
-Parcialmente Implementado
-
-- Configuração de aplicar resolução;
-- Configuração de retornar para resolução inicial.
-
-## A fazer a longo prazo
-
-Os itens abaixo estão mapeados para serem feitos:
-
-- Reavaliar as soluções utilizadas nos itens de curto prazo, aplicar melhorias etc;
-- Utilizar ou fazer alguma solução de gravação de teclas, movimentos do mouse, clicks etc que possibilite automatizar o processo de benchmark jogando(gameplay);
-- Definir uma metologia para executar os comandos que foram salvos, a ideia incial seria armazenar um arquivo no formato "ahk" e realizar uma chamada de dentro do código, possívelmente vai precisar que a pessoa que utilize a ferramenta realize a importação do arquivo, pois a importaçõa automática não é algo padrão do Autohotkey;
-- Verificar e implementar uma solução que possibilite a importação automática das informações do arquivo de comandos gravados de gameplay;
-- Verificar se existem outras informações relevantes do computador que podem ser amazenadas, pesquisar os comandos de COM do Windows e implentar.
+- **[Board no Trello](https://trello.com/b/nuLJmdEz/benchmark-auto)**
 
 ## Arquivos de Configuração do Jogo
 

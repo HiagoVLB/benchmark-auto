@@ -17,19 +17,24 @@ Class ManipularJogo
 
     }
 
-    setResolucao(irTelaResolucao, resolucao, sairTelaResolucao)
+    setResolucao(irTelaResolucao, resolucao, aplicarResolucao, sairTelaResolucao)
     {
         this.clickMultiplo(irTelaResolucao)
         this.midSleep()
+
         this.clickMultiplo(resolucao)
         this.midSleep()
+
+        this.clickMultiplo(aplicarResolucao)
+        this.midSleep()
+
         this.clickMultiplo(sairTelaResolucao)
         this.midSleep()
     }
 
     clickMultiplo(listaPosicoes)
     {
-        if(listaPosicoes != [])
+        if(listaPosicoes != [] && listaPosicoes != "")
         {
             for x in listaPosicoes
             {

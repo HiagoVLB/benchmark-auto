@@ -32,6 +32,7 @@ Class BenchmarkJogo
         }
         this.manipJogo.midSleep()
 
+        this.retornarParaResolucaoInicial(jogo)
         ;fecha o jogo
         this.manipJogo.clickMultiplo(jogo.getPosicoesFecharJogo())
         this.manipJogo.midSleep()
@@ -77,7 +78,7 @@ Class BenchmarkJogo
     benchmarkResolucao(jogo, clickResolucao, textoResolucao)
     {
         ;Seta a resolução
-        this.manipJogo.setResolucao(jogo.getIrTelaResolucao(), clickResolucao,jogo.getSairTelaResolucao())
+        this.manipJogo.setResolucao(jogo.getIrTelaResolucao(), clickResolucao, jogo.getAplicarResolucao(), jogo.getSairTelaResolucao())
         this.manipJogo.clickMultiplo(jogo.getAplicarResolucao())
         ;Inicia o benchmark e tira os prints
         this.manipJogo.clickMultiplo(jogo.getIniciarBenchmark())
@@ -101,5 +102,10 @@ Class BenchmarkJogo
                 Sleep Ceil(jogo.getDuracaoBenchmark()/100*30)
             this.arquivosPrint.printar(this.caminhoOrigemPrint, this.caminhoResultado, this.nomeArquivo(n, jogo, sufixo))
         }
+    }
+
+    retornarParaResolucaoInicial(jogo)
+    {
+        this.manipJogo.setResolucao(jogo.getIrTelaResolucao(), jogo.getRetornarResolucaoInicial(), jogo.getAplicarResolucao(), jogo.getSairTelaResolucao())
     }
 }
