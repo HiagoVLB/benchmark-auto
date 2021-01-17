@@ -1,6 +1,6 @@
 Class Print
 {
-    TirarPrint(caminhoOrigem, caminhoDestino, nomeArquivo)
+    printar(caminhoOrigem, caminhoDestino, nomeArquivo)
     {
         this.Print()
         if(!DirExist(caminhoDestino))

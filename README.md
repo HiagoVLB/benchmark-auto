@@ -23,8 +23,6 @@ Os itens abaixo estão mapeados para serem feitos:
 
 Parcialmente Implementado
 
-- Configuração do tempo de duração do benchmark para identificar quando ele acabou;
-- Configuração de intervalo de printscreen durante benchmark (início até fim);
 - Configuração de aplicar resolução;
 - Configuração de retornar para resolução inicial.
 

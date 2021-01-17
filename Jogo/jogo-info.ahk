@@ -73,7 +73,6 @@ Class JogosConfiguracao
         confJogo.setIniciarBenchmark(dadosArquivoJogo[14])
         confJogo.setSairBenchark(dadosArquivoJogo[15])
         confJogo.setDuracaoBenchmark(dadosArquivoJogo[16])
-        confJogo.setIntervaloPrintBechmark(dadosArquivoJogo[17])
 
         return confJogo
     }

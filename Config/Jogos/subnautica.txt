@@ -13,5 +13,4 @@ Comandos Sair Tela da Resolucao: 730,1130;
 Comandos Retornar para Resolucao Inicial: ;
 Comandos Iniciar Benchmark: ;
 Comandos Fechar Benchmark: ;
-Duracao do Benchmark em Segundos: 60
-Intervalo de Print no Benchmark em Segundos: 60
+Duracao do Benchmark em Segundos: 30

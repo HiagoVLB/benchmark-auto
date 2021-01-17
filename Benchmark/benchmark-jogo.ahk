@@ -49,10 +49,10 @@ Class BenchmarkJogo
         return (jogo.getResolucaoFullHd().Length != 0 || jogo.getResolucaoQuadHd().Length != 0 || jogo.getResolucaoUltraHd().Length != 0)
     }
 
-    inciarBenchmarkSemResolucao()
+    inciarBenchmarkSemResolucao(jogo)
     {
-        this.manipJogo.clickMultiplo()
-        this.armazenarPrint("1",jogo, "Resolucao Padrao")
+        this.manipJogo.clickMultiplo(jogo.getIniciarBenchmark())
+        this.armazenarPrint(jogo, "Resolucao Padrao")
     }
 
     iniciarBenchmarkComResolucao(jogo)
@@ -78,9 +78,10 @@ Class BenchmarkJogo
     {
         ;Seta a resolução
         this.manipJogo.setResolucao(jogo.getIrTelaResolucao(), clickResolucao,jogo.getSairTelaResolucao())
+        this.manipJogo.clickMultiplo(jogo.getAplicarResolucao())
         ;Inicia o benchmark e tira os prints
-        ;this.manipJogo.clickMultiplo(jogo.getIniciarBenchmark())
-        this.armazenarPrint(this.nomeArquivo("1", jogo, textoResolucao))
+        this.manipJogo.clickMultiplo(jogo.getIniciarBenchmark())
+        this.armazenarPrint(jogo, textoResolucao)
     }
 
     nomeArquivo(prefix, jogo, sufixo)
@@ -88,8 +89,17 @@ Class BenchmarkJogo
         return prefix " - " jogo.getNomeJogo() " - " sufixo
     }
 
-    armazenarPrint(nomeArquivo)
-    {
-        this.arquivosPrint.TirarPrint(this.caminhoOrigemPrint, this.caminhoResultado, nomeArquivo)
+    armazenarPrint(jogo, sufixo)
+    { 
+        n := 0
+        While n != 3
+        {
+            n += 1
+            if(n == 1)
+                Sleep Ceil(jogo.getDuracaoBenchmark()/100*20)
+            if(n >= 2)
+                Sleep Ceil(jogo.getDuracaoBenchmark()/100*30)
+            this.arquivosPrint.printar(this.caminhoOrigemPrint, this.caminhoResultado, this.nomeArquivo(n, jogo, sufixo))
+        }
     }
 }

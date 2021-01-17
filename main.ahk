@@ -17,7 +17,6 @@ Class Benchmark
         {
             BenchmarkJog.executarBenchmark(jogo)
         }
-
     }
 }
 

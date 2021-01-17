@@ -95,11 +95,6 @@ Class ControllerJogo
         return this.duracaoSegundosBenchmark
     }
 
-    getIntervaloPrintBechmark()
-    {
-        return this.intervaloPrintBechmark
-    }
-
     ;Set
     setNomeJogo(nomeJogo)
     {
@@ -175,10 +170,5 @@ Class ControllerJogo
     setDuracaoBenchmark(duracaoSegundosBenchmark)
     {
         return this.duracaoSegundosBenchmark := duracaoSegundosBenchmark
-    }
-
-    setIntervaloPrintBechmark(intervaloPrintBechmark)
-    {
-        return this.intervaloPrintBechmark := intervaloPrintBechmark
     }
 }

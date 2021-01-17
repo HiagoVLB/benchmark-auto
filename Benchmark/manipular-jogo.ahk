@@ -29,10 +29,13 @@ Class ManipularJogo
 
     clickMultiplo(listaPosicoes)
     {
-        for x in listaPosicoes
+        if(listaPosicoes != [])
         {
-            Click(x[1],x[2])
-            this.fastSleep()
+            for x in listaPosicoes
+            {
+                Click(x[1],x[2])
+                this.fastSleep()
+            }
         }
     }
 
