@@ -16,9 +16,16 @@ Class Arquivo
         return linhasArquivo
     }
 
-    escreverArquivo(listaLinhas)
+    escreverArquivo(caminhoDestino, nomeArquivo, parametros)
     {
-
+        dadosTratados := ""
+        if(!DirExist(caminhoDestino))
+        {
+            DirCreate caminhoDestino
+            Sleep 5 * 1000
+        }
+        arquivoEscrita := FileOpen(caminhoDestino "\" nomeArquivo, "w")
+        arquivoEscrita.Write(parametros)
     }
 
     setCaminhoArquivo(caminhoArquivo)

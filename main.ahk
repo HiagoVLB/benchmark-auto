@@ -2,20 +2,25 @@
 
 #Include "Jogo/jogo-info.ahk"
 #Include "benchmark/benchmark-jogo.ahk"
+#Include "sistema/armazenamento-sistema.ahk"
+
 #Include "sistema/arquivo.ahk"
-#Include "sistema/config-windows.ahk"
+#Include "sistema/especificacao.ahk"
 
 Class Benchmark
 {
     startBenchmark()
     {
-        JogosConfig := JogosConfiguracao.New()
-        armezanamento := ArmazenamentoConfig.New()
-        BenchmarkJog := BenchmarkJogo.New(armezanamento) 
+        arq := Arquivo.New()
+        arm := ArmazenamentoSistema.New()
+        benchJogo := BenchmarkJogo.New(arm)
+        jogosConfig := JogosConfiguracao.New()
+        espec := Especificacao.New()
 
-        for jogo in JogosConfig.getJogosConfigBenchmark()
+        espec.escreverEspecs(arq, arm, espec)
+        for jogo in jogosConfig.getJogosConfigBenchmark()
         {
-            BenchmarkJog.executarBenchmark(jogo)
+            benchJogo.executarBenchmark(jogo)
         }
     }
 }

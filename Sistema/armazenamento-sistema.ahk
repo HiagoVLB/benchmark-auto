@@ -1,6 +1,6 @@
 #Include "arquivo.ahk"
 
-Class ArmazenamentoConfig
+Class ArmazenamentoSistema
 {
     caminhoArquivoConfig := "Config\Windows\armazenamento.txt"
 

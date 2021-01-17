@@ -14,7 +14,7 @@ Class Especificacao
     {
         placaVideo := ""
         For GPU in ComObjGet("winmgmts:").ExecQuery("SELECT * FROM Win32_VideoController") {
-            placaVideo := GPU.Name " - " ;GPU.VideoMemoryType.VRAM
+            placaVideo := GPU.Name
         }
 
         return placaVideo
@@ -22,11 +22,22 @@ Class Especificacao
 
     getRAM()
     {
-        memoriaRAM := []
+        memoriaRAM := ""
         For RAM in ComObjGet("winmgmts:").ExecQuery("SELECT * FROM Win32_PhysicalMemory") {
-            memoriaRAM.push("Capacidade: " Ceil(RAM.Capacity/(1024*1024*1024)) "GB" " - Frequencia: " RAM.Speed " - Fabricante: " RAM.Manufacturer)
+            memoriaRAM .= "Capacidade: " Ceil(RAM.Capacity/(1024*1024*1024)) "GB" " - Frequencia: " RAM.Speed " - Fabricante: " RAM.Manufacturer "`n"
         }
-
+        ;Remove a última quebra de linha
+        memoriaRAM := SubStr(memoriaRAM, 1, StrLen(memoriaRAM) -1)
         return memoriaRAM
+    }
+
+    getEspecificaoTexto()
+    {
+        return "" this.getCPU() "`n" this.getGPU() "`n" this.getRAM() "`n"
+    }
+
+    escreverEspecs(arq, arm, espec)
+    {
+        arq.escreverArquivo(arm.getCaminhoResultado(),"especificacao.txt",espec.getEspecificaoTexto())
     }
 }
