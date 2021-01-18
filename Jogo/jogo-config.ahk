@@ -57,22 +57,24 @@ Class JogosConfiguracao
         confJogo.setCaminhoJogo(dadosArquivoJogo[3])
         ;Inicialiazacao
         confJogo.setTempoIniciarJogo(dadosArquivoJogo[4])
-        confJogo.setTempoTelaInicial(dadosArquivoJogo[5])
+        confJogo.setAcionarTelaInicial(dadosArquivoJogo[5])
+        confJogo.setTempoTelaInicial(dadosArquivoJogo[6])
         ;fechar o jogo
-        confJogo.setPosicoesFecharJogo(dadosArquivoJogo[6])
+        confJogo.setPosicoesFecharJogo(dadosArquivoJogo[7])
         ;resolucoes
-        confJogo.setResolucaoFullHd(dadosArquivoJogo[7])
-        confJogo.setResolucaoQuadHd(dadosArquivoJogo[8])
-        confJogo.setResolucaoUltraHd(dadosArquivoJogo[9])
+        confJogo.setResolucaoFullHd(dadosArquivoJogo[8])
+        confJogo.setResolucaoQuadHd(dadosArquivoJogo[9])
+        confJogo.setResolucaoUltraHd(dadosArquivoJogo[10])
         ;tela de escolha de resolucao
-        confJogo.setIrTelaResolucao(dadosArquivoJogo[10])
-        confJogo.setAplicarResolucao(dadosArquivoJogo[11])
-        confJogo.setSairTelaResolucao(dadosArquivoJogo[12])
-        confJogo.setRetornarResolucaoInicial(dadosArquivoJogo[13])
+        confJogo.setIrTelaResolucao(dadosArquivoJogo[11])
+        confJogo.setAplicarResolucao(dadosArquivoJogo[12])
+        confJogo.setSairTelaResolucao(dadosArquivoJogo[13])
+        confJogo.setRetornarResolucaoInicial(dadosArquivoJogo[14])
         ;procedimentos de benchmark
-        confJogo.setIniciarBenchmark(dadosArquivoJogo[14])
-        confJogo.setSairBenchark(dadosArquivoJogo[15])
+        confJogo.setIniciarBenchmark(dadosArquivoJogo[15])
         confJogo.setDuracaoBenchmark(dadosArquivoJogo[16])
+        confJogo.setSairBenchark(dadosArquivoJogo[17])
+        confJogo.setTelaInicialBenchmark(dadosArquivoJogo[18])
 
         return confJogo
     }

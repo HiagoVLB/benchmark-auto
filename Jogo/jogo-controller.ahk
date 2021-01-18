@@ -4,6 +4,7 @@ Class ControllerJogo
     nomeExecJogo := ""
     caminhojogo := ""
     tempoParaIniciarJogo := 0
+    posicoesTelaInicial := []
     tempoTelaInicialJogo := 0
     posicoesFecharJogo := []
     posicaoResolucaoFullHd := []
@@ -17,6 +18,8 @@ Class ControllerJogo
     posiecoesSairBenchmark := []
     duracaoSegundosBenchmark := 0
     intervaloPrintBechmark := 0
+    posicoesSairBenchmark := []
+    telaInicialBenchmark := "false"
 
     ; Get
     getNomeJogo()
@@ -37,6 +40,11 @@ Class ControllerJogo
     getTempoIniciarJogo()
     {
         return this.tempoParaIniciarJogo
+    }
+
+    getAcionarTelaInicial(posicoesTelaInicial)
+    {
+        return this.posicoesTelaInicial
     }
 
     getTempoTelaInicial()
@@ -95,6 +103,12 @@ Class ControllerJogo
         return this.duracaoSegundosBenchmark
     }
 
+    getTelaInicialBenchmark()
+    {
+        return this.telaInicialBenchmark
+    }
+
+    ;---------------------------------------------------------------------
     ;Set
     setNomeJogo(nomeJogo)
     {
@@ -114,6 +128,11 @@ Class ControllerJogo
     setTempoIniciarJogo(tempoParaIniciarJogo)
     {
         this.tempoParaIniciarJogo := tempoParaIniciarJogo 
+    }
+
+    setAcionarTelaInicial(posicoesTelaInicial)
+    {
+        this.posicoesTelaInicial := posicoesTelaInicial
     }
 
     setTempoTelaInicial(tempoTelaInicialJogo)
@@ -142,33 +161,38 @@ Class ControllerJogo
     }
 
     setIrTelaResolucao(irTelaResolucao){
-        return this.irTelaResolucao := irTelaResolucao
+        this.irTelaResolucao := irTelaResolucao
     }
 
     setAplicarResolucao(posicoesAplicarResolucao)
     {
-        return this.posicoesAplicarResolucao := posicoesAplicarResolucao
+        this.posicoesAplicarResolucao := posicoesAplicarResolucao
     }
 
     setSairTelaResolucao(sairTelaResolucao){
-        return this.sairTelaResolucao := sairTelaResolucao
+        this.sairTelaResolucao := sairTelaResolucao
     }
 
     setRetornarResolucaoInicial(posicoesRetornarResolucaoInicial)
     {
-        return this.posicoesRetornarResolucaoInicial := posicoesRetornarResolucaoInicial
+        this.posicoesRetornarResolucaoInicial := posicoesRetornarResolucaoInicial
     }
 
     setIniciarBenchmark(posicoesIniciarBenchmark){
-        return this.posicoesIniciarBenchmark := posicoesIniciarBenchmark
+        this.posicoesIniciarBenchmark := posicoesIniciarBenchmark
     }
 
     setSairBenchark(posicoesSairBenchmark){
-        return this.posicoesSairBenchmark := posicoesSairBenchmark
+        this.posicoesSairBenchmark := posicoesSairBenchmark
     }
 
     setDuracaoBenchmark(duracaoSegundosBenchmark)
     {
-        return this.duracaoSegundosBenchmark := duracaoSegundosBenchmark
+        this.duracaoSegundosBenchmark := duracaoSegundosBenchmark
+    }
+
+    setTelaInicialBenchmark(telaInicialBenchmark)
+    {
+        this.telaInicialBenchmark := telaInicialBenchmark
     }
 }
