@@ -16,7 +16,7 @@ Class BenchmarkJogo
         this.caminhoResultado := armazenamento.getCaminhoResultado()
     }
 
-    executarBenchmark(jogo)
+    iniciarEtapasBenchmark(jogo)
     {
 
         this.iniciarJogo(jogo)
@@ -54,6 +54,10 @@ Class BenchmarkJogo
     {
         this.manipJogo.clickMultiplo(jogo.getIniciarBenchmark())
         this.armazenarPrint(jogo, "Resolucao Padrao")
+        if(jogo.getTelaInicialBenchmark() == "true")
+            OutputDebug "TODO: Implementar etapa de tela incial após benchmark quando for true"
+        else
+            this.manipJogo.clickMultiplo(jogo.getSairBenchark())
     }
 
     iniciarBenchmarkComResolucao(jogo)
@@ -83,6 +87,11 @@ Class BenchmarkJogo
         ;Inicia o benchmark e tira os prints
         this.manipJogo.clickMultiplo(jogo.getIniciarBenchmark())
         this.armazenarPrint(jogo, textoResolucao)
+        ;TODO
+        if(jogo.getTelaInicialBenchmark() == "true")
+            OutputDebug "TODO: Implementar etapa de tela incial após benchmark quando for true"
+        else
+            this.manipJogo.clickMultiplo(jogo.getSairBenchark())
     }
 
     nomeArquivo(prefix, jogo, sufixo)
@@ -97,9 +106,9 @@ Class BenchmarkJogo
         {
             n += 1
             if(n == 1)
-                Sleep Ceil(jogo.getDuracaoBenchmark()/100*20)
+                Sleep Ceil(jogo.getDuracaoBenchmark()*0.20)
             if(n >= 2)
-                Sleep Ceil(jogo.getDuracaoBenchmark()/100*30)
+                Sleep Ceil(jogo.getDuracaoBenchmark()*0.30)
             this.arquivosPrint.printar(this.caminhoOrigemPrint, this.caminhoResultado, this.nomeArquivo(n, jogo, sufixo))
         }
     }

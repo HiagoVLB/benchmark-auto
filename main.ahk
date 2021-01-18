@@ -19,7 +19,7 @@ Class Benchmark
         espec.escreverEspecs(arq, arm, espec)
         for jogo in jogosConfig.getJogosConfigBenchmark()
         {
-            benchJogo.executarBenchmark(jogo)
+            benchJogo.iniciarEtapasBenchmark(jogo)
         }
     }
 }
