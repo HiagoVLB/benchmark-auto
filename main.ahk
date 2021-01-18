@@ -1,9 +1,8 @@
 #SingleInstance Force
 
-#Include "Jogo/jogo-info.ahk"
+#Include "Jogo/jogo-config.ahk"
 #Include "benchmark/benchmark-jogo.ahk"
 #Include "sistema/armazenamento-sistema.ahk"
-
 #Include "sistema/arquivo.ahk"
 #Include "sistema/especificacao.ahk"
 
