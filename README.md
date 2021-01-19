@@ -22,8 +22,8 @@ Os proxímos passos planejados para serem implentados na aplicação estão mape
 
 As informações de configuração do jogo devem seguir uma estrutura/template que foi definido na codificação.
 
-### AVISO a fazer! Tutorial de Configuração dos Arquivos
+### Tutorial de Configuração dos Arquivos
 
-Para detalhes de sobre o tutorial de como configurar os arquivos e outras informações veja:
+Para detalhes e tutorais de como configurar os arquivos (jogo e armazenamento) ver o seguinte link:
 
 - **[Tutorial de Configuração do Arquivo](https://github.com/HiagoVLB/benchmark-auto/blob/master/docs/tutorial-configuracao.md)**
